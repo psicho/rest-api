@@ -1,0 +1,5 @@
+requests
+djangorestframework
+djangorestframework-csv
+djangorestframework-xml
+django_filters
