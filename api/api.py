@@ -31,26 +31,6 @@ class ThreeInnerList(generics.ListAPIView):
     permission_classes = (DjangoModelPermissions,)
 
 
-# class SellerPayMixin(object):
-#     filter_backends = (filters.DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
-#     filter_fields = ('assignee',)
-#
-#     model = SellerPay
-#     serializer_class = SellerPaySerializer
-#     # permission_classes = (IsAdminUser, QQubePermissions,)
-#     permission_classes = (QQubePermissions,)
-#
-#     def perform_create(self, serializer):
-#         serializer.save()
-#
-#     def get_queryset(self):
-#         if self.request.user.is_staff:
-#             querysets = SellerPay.objects.all()
-#         elif not self.request.user.is_staff and self.request.user.groups.filter(name="Sales").exists():
-#             querysets = SellerPay.objects.filter(assignee=self.request.user.id)
-#         return querysets
-
-
 class TopModelMixin(object):
     model = TopModel
     serializer_class = TopModelSerializer
